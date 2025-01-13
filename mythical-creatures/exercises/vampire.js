@@ -1,6 +1,10 @@
 class Vampire {
     constructor(name) {
         this.name = name;
+    };
+
+    pet() {
+        return `bat`
     }
 }
 
