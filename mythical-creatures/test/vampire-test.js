@@ -1,29 +1,29 @@
 var assert = require('chai').assert;
 var Vampire = require('../exercises/vampire');
 
-describe('Vampire', function() {
+  describe('Vampire', function() {
 
-  it('should be a function', function() {
-    assert.isFunction(Vampire);
-  });
+    it('should be a function', function() {
+      assert.isFunction(Vampire);
+    });
 
-  it('should instantiate our good friend, Vampire', function() {
-    var dracula = new Vampire();
+    it('should instantiate our good friend, Vampire', function() {
+      var dracula = new Vampire();
 
-    assert.instanceOf(dracula, Vampire);
-  });
+      assert.instanceOf(dracula, Vampire);
+    });
 
-  it('should have a name', function() {
-    var vampire = new Vampire('Jhun');
+    it('should have a name', function() {
+      var vampire = new Vampire('Jhun');
 
-    assert.equal(vampire.name, 'Jhun');
-  });
+      assert.equal(vampire.name, 'Jhun');
+    });
 
-  it('should have a pet bat as a default', function() {
-    var vampire = new Vampire('Brittany');
+    it('should have a pet bat as a default', function() {
+      var vampire = new Vampire('Brittany');
 
-    assert.equal(vampire.pet, 'bat');
-  });
+      assert.equal(vampire.pet, 'bat');
+    });
 
   it.skip('should take an argument for pet', function() {
     var vampire = new Vampire('Jeff', 'fox');
