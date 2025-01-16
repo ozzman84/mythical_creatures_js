@@ -17,6 +17,15 @@ class Werewolf {
             return 'Where are I?';
         }
     };
+
+    eatVictim(victim) {
+        if (this.form == 'wolf') {
+            victim.alive = false;
+            this.form = 'human';
+            return `Yum, ${victim.name} was delicious.`;
+        }
+        return "No way am I eating Baby, I'd like a burger!"
+    }
 }
 
 module.exports = Werewolf;
