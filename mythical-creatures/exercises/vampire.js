@@ -13,6 +13,6 @@ class Vampire {
         this.ouncesDrank += 10;
         this.thirsty = false;
     }
-}
+};
 
 module.exports = Vampire;
