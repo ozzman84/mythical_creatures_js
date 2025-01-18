@@ -17,7 +17,8 @@ class Direwolf {
     }
 
     leave(stark) {
-        this.starksToProtect.filter(person => person === stark)
+        stark.safe = false;
+        this.starksToProtect.pop()
     }
 }
 
