@@ -2,33 +2,34 @@ const assert = require('chai').assert;
 const Fairy = require('../exercises/fairy');
 
 describe('Fairy', () => {
-  it.skip('should be a function', () => {
+  it('should be a function', () => {
     assert.isFunction(Fairy);
   });
 
-  it.skip('should instantiate a fairy', () => {
+  it('should instantiate a fairy', () => {
     const fairy = new Fairy();
 
     assert.isObject(fairy);
   });
 
   it.skip('should have a name', () => {
-    // instantiate a Fairy object with your name as an argument
-    // instantiate another Fairy object with someone else's name as an argument
+    const fairy = new Fairy('Mike');
+    const fairy2 = new Fairy('Mary');
+    const fairy3 = new Fairy('Chelsea');
 
-    // assert that the first fairy's name is your name
-    // assert that the second fairy's name is the other name
+    assert.equal(fairy.name, 'Mike');
+    assert.equal(fairy2.name, 'Mary');
 
     //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
 
-  it.skip('should have some fairy dust by default', () => {
+  it('should have some fairy dust by default', () => {
     const fairy = new Fairy('Mab');
 
     assert.equal(fairy.dust, 10);
   });
 
-  it.skip('should get a small amount of fairy dust when others believe in her', () => {
+  it('should get a small amount of fairy dust when others believe in her', () => {
     const fairy = new Fairy('Sookie');
     const dustBefore = fairy.dust;
 
@@ -39,7 +40,7 @@ describe('Fairy', () => {
     assert.equal(difference, 1);
   });
 
-  it.skip('should get a lot of fairy dust from believeing in herself', () => {
+  it('should get a lot of fairy dust from believeing in herself', () => {
     const fairy = new Fairy('Tinkerbell');
     const dustBefore = fairy.dust;
 
@@ -50,13 +51,13 @@ describe('Fairy', () => {
     assert.equal(difference, 10);
   });
 
-  it.skip('should start with an Iris flower dress', () => {
+  it('should start with an Iris flower dress', () => {
     const fairy = new Fairy('Rose');
 
     assert.deepEqual(fairy.clothes, {dresses: ['Iris']});
   });
 
-  it.skip('should turn flowers into more dresses', () => {
+  it('should turn flowers into more dresses', () => {
     const fairy = new Fairy('Honeysuckle');
 
     fairy.makeDresses(['Daffodil', 'Tulip', 'Poppy']);
