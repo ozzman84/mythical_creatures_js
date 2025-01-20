@@ -5,8 +5,8 @@ class Fairy {
         this.clothes = {dresses: ['Iris']};
         this.disposition = 'Good natured';
         this.humanWards = [];
+        
     }
-
     receiveBelief() {
         this.dust++;
     }
@@ -24,11 +24,15 @@ class Fairy {
     }
 
     replaceInfant(infant) {
-        if (this.disposition === 'Vengeful') {
-            infant.disposition = 'Malicious';
-            this.humanWards.pop(infant);
-        } else {
-            return infant
+        if (this.disposition !== 'Vengeful') {
+        return infant;
+        }
+
+        infant.disposition = 'Malicious';
+        this.humanWards.push(infant);
+
+        if (this.humanWards.length === 3) {
+            this.disposition = 'Good natured';
         }
     }
 }
