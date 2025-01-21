@@ -11,6 +11,7 @@ class Ogre {
         if (human.encounterCounter % 3 === 0) {
             human.viewsOgre = true;
             this.swingAt(human);
+            this.isKnockedOut(human);
         } else {
             human.viewsOgre = false;
         }
@@ -18,6 +19,16 @@ class Ogre {
 
     swingAt(human) {
         this.swings++;
+    }
+
+    isKnockedOut(human) {
+        if (this.swings === 2) {
+            human.knockedOut = true;
+        }
+    }
+
+    apologize(human) {
+        human.knockedOut = false;
     }
 }
 
