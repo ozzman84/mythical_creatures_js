@@ -2,6 +2,7 @@ class Sphinx {
     constructor(name = null) {
         this.name = name;
         this.riddles = [];
+        this.heroesEaten = 0;
     }
 
     collectRiddle(riddle) {
@@ -16,6 +17,7 @@ class Sphinx {
         var start = this.riddles.length
 
         this.riddles = this.riddles.filter(riddle => riddle.answer !== answer);
+    
         if (start > this.riddles.length) {
             return 'That wasn\'t that hard, I bet you don\'t get the next one'
         }
