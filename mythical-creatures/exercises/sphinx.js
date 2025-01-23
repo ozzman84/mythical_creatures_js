@@ -11,6 +11,10 @@ class Sphinx {
             this.riddles.shift();
         }
     }
+
+    attemptAnswer(answer) {
+        this.riddles = this.riddles.filter(riddle => riddle.answer !== answer);
+    }
 }
 
 module.exports = Sphinx;
