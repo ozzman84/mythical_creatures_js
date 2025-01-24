@@ -19,7 +19,7 @@ class Sphinx {
         this.riddles = this.riddles.filter(riddle => riddle.answer !== answer);
     
         if (start > this.riddles.length && this.riddles.length === 0) {
-            return 'PSSSSSSS THIS HAS NEVER HAPPENED, HOW DID YOU KNOW THE ANSWER WAS \"Halfway, after that it\'s running out.\"???'
+            return `PSSSSSSS THIS HAS NEVER HAPPENED, HOW DID YOU KNOW THE ANSWER WAS \"${answer}\"???`
         } else if (start > this.riddles.length) {
             return 'That wasn\'t that hard, I bet you don\'t get the next one'
         } else {
