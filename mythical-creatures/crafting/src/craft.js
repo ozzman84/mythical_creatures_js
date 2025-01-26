@@ -1,5 +1,3 @@
-var Material = require("../src/material.js");
-
 class Craft {
     constructor(params) {
         this.name = params.type;
