@@ -4,6 +4,11 @@ class Snowman {
         this.coal = params.coal;
         this.buttons = params.buttons;
         this.snowballs = params.snowballs;
+        this.magicHat = false;
+    }
+
+    canWearMagicHat() {
+        this.magicHat = true;
     }
 }
 
