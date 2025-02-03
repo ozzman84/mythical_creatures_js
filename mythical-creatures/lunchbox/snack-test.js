@@ -3,13 +3,13 @@ var Snack = require('./snack');
 
 describe('Snack', function() {
 
-  it.skip('should be extra delicious', function() {
+  it('should be extra delicious', function() {
     var pistachio = new Snack("Pistachio");
 
     assert.equal(pistachio.deliciousLevel, "extra");
   });
 
-  it.skip('should have a type', function() {
+  it('should have a type', function() {
     var pistachio = new Snack("Pistachio");
     var fruitSnack = new Snack("Fruit Snack");
 
@@ -17,19 +17,19 @@ describe('Snack', function() {
     assert.equal(fruitSnack.type, "Fruit Snack");
   });
 
-  it.skip('should start fully stocked', function() {
+  it('should start fully stocked', function() {
     var pistachio = new Snack("Pistachio");
 
     assert.equal(pistachio.amount, 100);
   });
 
-  it.skip('should start NOT inside of a lunch box', function() {
+  it('should start NOT inside of a lunch box', function() {
     var pistachio = new Snack("Pistachio");
 
     assert.equal(pistachio.isInLunchBox, false);
   });
 
-  it.skip('should see stock decrease after eaten', function() {
+  it('should see stock decrease after eaten', function() {
     var pistachio = new Snack("Pistachio");
 
     pistachio.getEaten();
