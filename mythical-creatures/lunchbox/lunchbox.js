@@ -16,9 +16,7 @@ class LunchBox {
         let healthySnacks = [];
 
         for (let i = 0; i < this.snacks.length; i++) {
-            let snack = this.snacks[i].type.toLowerCase()
-
-            if (snack.endsWith('fruit')) {
+            if (this.snacks[i].checkForHealthy()) {
                 healthySnacks.push(this.snacks[i].type);
             }
         }
