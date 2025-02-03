@@ -38,7 +38,7 @@ describe('Snack', function() {
     assert.equal(pistachio.amount, 70);
   });
 
-  it.skip('should be cutting it close if 20% or less remaining', function() {
+  it('should be cutting it close if 20% or less remaining', function() {
     var pistachio = new Snack("Pistachio");
 
     pistachio.getEaten();
@@ -53,7 +53,7 @@ describe('Snack', function() {
     assert.equal(pistachio.cuttingItClose, true);
   });
 
-  it.skip('should be considered healthy if the word "fruit" is in it', function() {
+  it('should be considered healthy if the word "fruit" is in it', function() {
     var pistachio = new Snack("Pistachio");
     var mixedFruit = new Snack("Mixed fruit");
     var fruit = new Snack("Fruit");
