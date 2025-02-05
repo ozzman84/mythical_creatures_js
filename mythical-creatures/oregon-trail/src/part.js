@@ -3,6 +3,10 @@ class Part {
         this.type = type;
         this.broken = false;
     }
+
+    break() {
+        this.broken = true;
+    }
 }
 
 module.exports = Part;
