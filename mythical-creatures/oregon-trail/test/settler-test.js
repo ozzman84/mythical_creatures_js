@@ -51,7 +51,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'fair');
   });
 
-  it.skip('should be able to become more distressed', function() {
+  it('should be able to become more distressed', function() {
     var traveler = new Settler({ name: 'Will', age: 21, nationality: 'English' });
 
     traveler.experienceDistress('broken arm');
@@ -61,7 +61,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'poor');
   });
 
-  it.skip('should be able to die from too many ailments', function() {
+  it('should be able to die from too many ailments', function() {
     var traveler = new Settler({ name: 'Will', age: 21, nationality: 'English' });
 
     traveler.experienceDistress('broken arm');
@@ -72,7 +72,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'dead');
   });
 
-  it.skip('should not be able to experience distress after death', function() {
+  it('should not be able to experience distress after death', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     traveler.experienceDistress('broken arm');
@@ -84,7 +84,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'dead');
   });
 
-  it.skip('should be able to be healed', function() {
+  it('should be able to be healed', function() {
     var will = new Settler({ name: 'Will', age: 21, nationality: 'English' });
     var hannah = new Settler({ name: 'Hannah', age: 30, nationality: 'English' });
 
@@ -102,7 +102,7 @@ describe('Settler', function() {
     assert.equal(hannah.status, 'healthy');
   });
 
-  it.skip('should not be able to be healed if dead', function() {
+  it('should not be able to be healed if dead', function() {
     var traveler = new Settler({ name: 'Will', age: 21, nationality: 'English' });
 
     traveler.experienceDistress('broken arm');
