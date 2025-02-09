@@ -4,6 +4,7 @@ class Runner {
         this.age = age;
         this.milesRun = 0;
         this.fitness = 25;
+        this.completedRaces = [];
     }
 
     runSomeMiles(miles) {
@@ -13,6 +14,11 @@ class Runner {
 
     stretch() {
         this.fitness += .5;
+    }
+
+    runRace(race, miles) {
+        this.completedRaces.push(race);
+        this.runSomeMiles(miles);
     }
 }
 
