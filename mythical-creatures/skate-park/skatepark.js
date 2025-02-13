@@ -16,8 +16,17 @@ class SkatePark {
             return 'Sorry, we are at max capacity. Thank you for understanding.'
         }
         this.occupants.push(skater);
-        console.log(this.occupants)
-     }
+
+        if (this.cost === 0) {
+            return `Welcome to the free ${this.name} Skatepark!`
+        } else {
+            skater.money -= this.cost;
+            return `Welcome to ${this.name}, the cost will be $${this.cost}.00.`
+        }
+    }
+
+    
+     
 }
 
 module.exports = SkatePark;
