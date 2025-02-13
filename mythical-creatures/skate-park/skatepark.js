@@ -8,6 +8,16 @@ class SkatePark {
         this.cost = params.price || 0;
         this.occupants = [];
     }
+
+    admit(skater) {
+        if (this.cost > skater.money) {
+            return `Sorry, you don't have enough money.`;
+        } else if (this.occupants.length >= 3) {
+            return 'Sorry, we are at max capacity. Thank you for understanding.'
+        }
+        this.occupants.push(skater);
+        console.log(this.occupants)
+     }
 }
 
 module.exports = SkatePark;
