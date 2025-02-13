@@ -7,6 +7,12 @@ class Skater {
         this.frustration = 0;
     }
 
+    
+    learnNewTrick(trick) {
+        this.tricks[trick] = true;
+        return `I just learned to ${trick}!!!`
+    }
+
     practice(trick) {
         if (!this.tricks[trick]) {
             this.frustration++;
